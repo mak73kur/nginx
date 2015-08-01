@@ -86,6 +86,7 @@ HTTP_UWSGI=YES
 HTTP_SCGI=YES
 HTTP_PERL=NO
 HTTP_MEMCACHED=YES
+HTTP_PROXY_CONNECT=YES
 HTTP_LIMIT_CONN=YES
 HTTP_LIMIT_REQ=YES
 HTTP_EMPTY_GIF=YES
@@ -245,6 +246,7 @@ do
         --without-http_uwsgi_module)     HTTP_UWSGI=NO              ;;
         --without-http_scgi_module)      HTTP_SCGI=NO               ;;
         --without-http_memcached_module) HTTP_MEMCACHED=NO          ;;
+        --without-http_proxy_connect_module) HTTP_PROXY_CONNECT=NO  ;;
         --without-http_limit_conn_module) HTTP_LIMIT_CONN=NO        ;;
         --without-http_limit_req_module) HTTP_LIMIT_REQ=NO         ;;
         --without-http_empty_gif_module) HTTP_EMPTY_GIF=NO          ;;
@@ -413,6 +415,7 @@ cat << END
   --without-http_uwsgi_module        disable ngx_http_uwsgi_module
   --without-http_scgi_module         disable ngx_http_scgi_module
   --without-http_memcached_module    disable ngx_http_memcached_module
+  --without-http_proxy_connect_module disable ngx_http_proxy_connect_module
   --without-http_limit_conn_module   disable ngx_http_limit_conn_module
   --without-http_limit_req_module    disable ngx_http_limit_req_module
   --without-http_empty_gif_module    disable ngx_http_empty_gif_module
